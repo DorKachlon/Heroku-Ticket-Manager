@@ -5,9 +5,9 @@ const fs = require("fs").promises;
 
 const filePath = "./data.json";
 
-app.use(express.static("build"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(express.static("build"));
 
 // http://localhost:8080/api/tickets?searchText=Need+a+Little
 // http://localhost:8080/api/tickets?searchContent=my+code+to+display+commas
